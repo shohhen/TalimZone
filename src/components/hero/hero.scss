@@ -1,0 +1,65 @@
+@import '../../styles/main';
+
+
+.hero {
+    padding-top: 17px;
+    margin-top: 40px;
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 4.72px solid #000;
+
+    .hero__text {
+        display: flex;
+        flex-direction: column;
+
+        h2,
+        span {
+            font-size: 50px;
+            font-family: $family-lato-bold;
+            text-transform: uppercase;
+            line-height: 120%;
+        }
+
+        h2 {
+            color: $second-background;
+        }
+
+        span {
+            color: $main-text;
+        }
+
+        .hero__text-button {
+            margin: 32px 0;
+            display: flex;
+            flex-wrap: wrap;
+
+            a{
+                margin-right: 16px;
+                padding: 16px 52px;
+                border: 1px solid $main-text;
+                background: #fff;
+                box-shadow: 4px 4px 0px 0px $main-text;
+                transition: .3s;
+                cursor: pointer;
+                font-size: 16px;
+                text-decoration: none;
+                
+          
+            }
+
+            a:hover {
+                box-shadow: none;
+            }
+
+            a:first-child {
+                background-color: $second-background;
+            }
+        }
+    }
+
+    .hero__img {
+        display: flex;
+    }
+}

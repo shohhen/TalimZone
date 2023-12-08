@@ -1,0 +1,44 @@
+@import '../../styles/main';
+
+.courses {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+
+    h2 {
+        @include h2-bold();
+        margin-bottom: 64px;
+    }
+
+    .courses__list {
+        display: flex;
+        width: 100%;
+        align-items: center;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        gap: 64px 113px;
+
+        .courses__list-single {
+            width: calc(25% - 113px + 20px);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            gap: 8px;
+            padding: 24px;
+            border: 1px solid $main-text;
+            box-shadow: 4px 4px 0px 0px $main-text;
+            text-transform: capitalize;
+            font-size: 16px;
+            cursor: pointer;
+            transition: .3s;
+        }
+
+        .courses__list-single:hover {
+            box-shadow: none;
+        }
+    }
+}

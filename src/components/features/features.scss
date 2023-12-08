@@ -1,0 +1,31 @@
+@import '../../styles/main';
+.features {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    .features__single {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        width: 25%;
+        padding: 43px;
+        gap: 8px;
+        text-align: center;
+        text-transform: capitalize;
+        line-height: 140%;
+
+        h3 {
+            font-size: 24px;
+            font-family: $family-lato-bold;
+            color: #000;
+        }
+
+        p {
+            font-size: 18px;
+            color: #000;
+        }
+    }
+}

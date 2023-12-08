@@ -1,0 +1,144 @@
+/* -------------------- FONTS -------------------- */
+@import "fonts";
+
+$family-lato-regular: 'Lato';
+$family-lato-bold: 'Lato-Bold';
+
+$main-line-height: 180%;
+
+@mixin body-xlarge-bold {
+    font-family: $family-lato-bold;
+    font-size: 24px;
+    line-height: $main-line-height;
+}
+
+@mixin body-xlarge {
+    font-family: $family-lato-regular;
+    font-size: 24px;
+    line-height: $main-line-height;
+}
+
+@mixin body-large-bold {
+    font-family: $family-lato-bold;
+    font-size: 18px;
+    line-height: $main-line-height;
+}
+
+@mixin body-large {
+    font-family: $family-lato-regular;
+    font-size: 18px;
+    line-height: $main-line-height;
+}
+
+@mixin body-medium-bold {
+    font-family: $family-lato-bold;
+    font-size: 16px;
+    line-height: $main-line-height;
+}
+
+@mixin body-medium {
+    font-family: $family-lato-regular;
+    font-size: 16px;
+    line-height: $main-line-height;
+}
+
+@mixin body-small-bold {
+    font-family: $family-lato-bold;
+    font-size: 14px;
+    line-height: $main-line-height;
+}
+
+@mixin body-small {
+    font-family: $family-lato-regular;
+    font-size: 14px;
+    line-height: $main-line-height;
+}
+
+@mixin h1-bold {
+    font-family: $family-lato-bold;
+    font-size: 56px;
+}
+
+@mixin h2-bold {
+    font-family: $family-lato-bold;
+    font-size: 40px;
+}
+
+@mixin h4-bold {
+    font-family: $family-lato-bold;
+    font-size: 32px;
+}
+
+/* -------------------- FONTS -------------------- */
+
+
+/* -------------------- COLORS -------------------- */
+
+$main-background: #F9F9F9;
+$second-background: #38b6ff;
+$second-background2: #3FBDF1;
+$main-text: #2E2E2E;
+$second-text: $second-background;
+
+//buttons
+$main-button: $second-background;
+$second-button: $main-text;
+
+/* -------------------- COLORS -------------------- */
+
+/* -------------------- GRID -------------------- */
+
+*,
+::after,
+::before,
+body {
+
+    @include body-medium();
+
+ 
+
+ /*    outline: 1px solid red; */
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    color: $main-text;
+
+  
+  
+}
+
+.main-wrapper {
+    display: flex;
+    margin-top: 120px;
+}
+
+.main-component {
+    max-width: 1440px;
+    box-sizing: border-box;
+    padding: 32px 160px;
+    margin: auto;
+}
+
+h2 {
+    font-family: $family-lato-bold;
+    font-size: 40px;
+}
+
+button {
+    padding: 16px 32px;
+    font-size: 18px;
+    border: 1px solid #000;   
+    background-color: $second-background;
+    box-shadow: 4px 4px 0px 0px $main-text;
+    cursor: pointer;
+    transition: .3s;
+}
+
+button:hover {
+    box-shadow: none;
+}
+
+a {
+    text-decoration: none;
+}
