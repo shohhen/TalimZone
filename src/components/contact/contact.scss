@@ -12,7 +12,7 @@
         flex-direction: column;
         gap: 31px;
 
-        input,textarea {
+        input,textarea,select {
             width: 100%;
             padding: 24px 32px;
             border: 1px solid #000;
@@ -20,12 +20,15 @@
             transition: .3s;
            
         }
-        input::placeholder,textarea::placeholder {
+
+      
+
+        input::placeholder,textarea::placeholder,select::placeholder {
             text-transform: capitalize;
         }
 
 
-        input:focus,textarea:focus {
+        input:focus,textarea:focus, select:focus {
             box-shadow: none;
             border: 1px solid #000;
             outline: none;

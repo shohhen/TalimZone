@@ -8,58 +8,27 @@ import Statistics from "./components/statistics/Statistics";
 import Faq from "./components/faq/Faq";
 import Contact from "./components/contact/Contact";
 import Footer from "./components/footer/Footer";
+import MainPage from "./pages/main-page/MainPage";
+import { Routes, Route } from "react-router-dom";
+import Register from "./pages/register/Register";
+import Loader from "./components/loader/Loader";
+import { useState, useEffect } from "react";
 
 function App() {
-  const items = [
-    {
-      title: "Accordion Item 1",
-      content: "Content for Accordion Item 1",
-    },
-    {
-      title: "Accordion Item 2",
-      content: "Content for Accordion Item 2",
-    },
-    {
-      title: "Accordion Item 2",
-      content: "Content for Accordion Item 2",
-    },
-    {
-      title: "Accordion Item 2",
-      content: "Content for Accordion Item 2",
-    },
-  ];
-  const numbers = [100, 30, 20];
-  const testimonials = [
-    {
-      image: "../src/assets/img/frame2.jpg",
-      text: "The courses were of exceptional quality and cutting-edge. You won't find these courses just anywhere.",
-      author: "John Doe",
-    },
-    {
-      image: "../src/assets/img/frame2.jpg",
-      text: "The courses were of exceptional quality and cutting-edge. You won't find these courses just anywhere.",
-      author: "Jane Smith",
-    },
-    {
-      image: "../src/assets/img/frame2.jpg",
-      text: "The courses were of exceptional quality and cutting-edge. You won't find these courses just anywhere.",
-      author: "Jane Smith",
-    },
-    // Add more testimonials as needed
-  ];
+  const [loading, setLoading] = useState(true);
+  useEffect(() => {
+    setTimeout(() => {
+      setLoading(false);
+    }, 4000);
+  }, []);
+  
   return (
     <>
-      <div>
-        <Header />
-        <Hero />
-        <Courses />
-        <Features />
-        <TestimonialSlider testimonials={testimonials} />
-        <Statistics finalNumber={numbers[1]} />
-        <Faq items={items} />
-        <Contact />
-        <Footer />
-      </div>
+     <Loader visible={loading} />
+      <Routes>
+        <Route path="/" element={<MainPage />} />
+        <Route path="/register" element={<Register />} />
+      </Routes>
     </>
   );
 }

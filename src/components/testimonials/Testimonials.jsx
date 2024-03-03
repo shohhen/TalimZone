@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import image from "../../assets/img/arrow-down.svg";
-import image1 from "../../assets/img/arrow-up.svg";
+import image from "/img/arrow-down.svg";
+import image1 from "/img/arrow-up.svg";
 import Fade from "react-reveal/Fade";
 import "./testimonials.scss";
 

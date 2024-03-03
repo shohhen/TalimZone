@@ -1,6 +1,6 @@
 import "./faq.scss";
 import React, { useState } from "react";
-import image from "../../assets/img/arrow.svg";
+import image from "/img/arrow-down.svg";
 
 const Faq = ({ items }) => {
   const [activeIndex, setActiveIndex] = useState(null);

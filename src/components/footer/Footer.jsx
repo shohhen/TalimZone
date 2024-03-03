@@ -14,30 +14,44 @@ const Footer = () => {
         </div>
         <div className="footer__info-contacts">
           <div>
-            <img src="../../../src/assets/img/envelope.svg" alt="" />
-            <Link to="mailto:karimberganoff@gmail.com">
-              Karmberganoff@gmail.com
+            <img src="../..//img/envelope.svg" alt="" />
+            <Link to="mailto:info@admissionscounselling.uz">
+              info@admissionscounselling.uz
             </Link>
           </div>
           <div>
-            <img src="../../../src/assets/img/phone-ringing.svg" alt="" />
-            <Link to="tel:998909039002">+998991234567</Link>
-            
+            <img src="../..//img/phone-ringing.svg" alt="" />
+            <Link to="tel:16477407430">+16477407430</Link>
           </div>
-
-          <Link className="support">connect to support</Link>
         </div>
-        <div className="promo"><h3>Made By <Link className="arctiq" target='_blank' to='https://arctiq.uz'>Arctiq</Link></h3></div>
+        <div className="promo">
+          <h3>
+            Made By{" "}
+            <Link className="arctiq" target="_blank" to="https://arctiq.uz">
+              Arctiq
+            </Link>
+          </h3>
+        </div>
       </div>
 
       <div className="footer__info-social main-component">
         <div>
-            <img src="../../../src/assets/img/logo3.svg" alt="" />
-            <h2>Admission Counselling</h2>
+          <h2>TalimZone</h2>
         </div>
         <div>
-            <p>Follow us on social media    |  </p>
-            <Link><img src="../../../src/assets/img/instagram.svg" alt="" /></Link>
+          <p>Follow us on social media | </p>
+          <Link
+            target="_blank"
+            to="https://www.instagram.com/admissions_counseling/"
+          >
+            <img className="footer__img" src="/img/instagram.svg" alt="" />
+          </Link>
+          <Link
+            target="_blank"
+            to="https://t.me/admission_counseling"
+          >
+            <img className="footer__img" src="/img/telegram.svg" alt="" />
+          </Link>
         </div>
       </div>
     </footer>
