@@ -13,17 +13,17 @@ const Footer = () => {
           </p>
         </div>
         <div className="footer__info-contacts">
-          <div>
+          {/*<div>
             <img src="../..//img/envelope.svg" alt="" />
             <Link to="mailto:info@admissionscounselling.uz">
               info@admissionscounselling.uz
             </Link>
-          </div>
+          </div>*/}
           <div>
             <img src="../..//img/phone-ringing.svg" alt="" />
             <Link to="tel:16477407430">+16477407430</Link>
           </div>
-        </div>
+        </div>{/*
         <div className="promo">
           <h3>
             Made By{" "}
@@ -31,7 +31,7 @@ const Footer = () => {
               Arctiq
             </Link>
           </h3>
-        </div>
+        </div>*/}
       </div>
 
       <div className="footer__info-social main-component">
@@ -42,13 +42,13 @@ const Footer = () => {
           <p>Follow us on social media | </p>
           <Link
             target="_blank"
-            to="https://www.instagram.com/admissions_counseling/"
+            to="#"
           >
             <img className="footer__img" src="/img/instagram.svg" alt="" />
           </Link>
           <Link
             target="_blank"
-            to="https://t.me/admission_counseling"
+            to="#"
           >
             <img className="footer__img" src="/img/telegram.svg" alt="" />
           </Link>
