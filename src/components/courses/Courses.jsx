@@ -22,7 +22,7 @@ const Courses = () => {
     {
       id: 2,
       img: "/img/book.png",
-      name: "Admissions course (Standard Plan )",
+      name: "Admissions course (Standard Plan)",
     },
     {
       id: 3,
@@ -148,7 +148,7 @@ const Courses = () => {
     },
     {
       id: 6,
-      name: "DET (Individual Training",
+      name: "DET (Individual Training)",
       title: "Services",
       title3: "Price : 50$",
       title2: `Mentors : Abdulloh Erkinov (DET score 135)

@@ -53,7 +53,7 @@ const Hero = () => {
           </div>
           <div className="hero__text-button">
             <AnchorLink href="#contact">Start Learning</AnchorLink>
-            <AnchorLink to="#courses">Explore Courses</AnchorLink>
+            <AnchorLink href="#courses">Explore Courses</AnchorLink>
           </div>
         </div>
         <div className="hero__img">
