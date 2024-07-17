@@ -5,6 +5,8 @@ import Features from "../../components/features/Features";
 import Statistics from "../../components/statistics/Statistics";
 import Contact from "../../components/contact/Contact";
 import Footer from "../../components/footer/Footer";
+import InfiniteCarousel from "../../components/carousel/Carousel"
+import Faq from "../../components/faq/Faq"
 const MainPage = () => {
   const items = [
     {
@@ -63,8 +65,8 @@ const MainPage = () => {
       <Hero />
       <Features />
       {/* <TestimonialSlider testimonials={testimonials} /> */}
-      {/* <InfiniteCarousel /> */}
-      {/* <Faq items={items} /> */}
+      <InfiniteCarousel />
+      <Faq items={items} />
       <Contact />
       <Footer />
     </>
