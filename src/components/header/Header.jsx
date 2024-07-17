@@ -17,13 +17,13 @@ const Header = () => {
             <AnchorLink href="#hero">Home</AnchorLink>
           </li>
           <li>
-            <Link target={"_blank"} to="https://talim-zone-market.vercel.app/">Courses</Link>
+            <AnchorLink href="#courses">Courses</AnchorLink>
           </li>
           <li>
             <AnchorLink href="#features">Features</AnchorLink>
           </li>
           <li>
-            <AnchorLink href="#">Forum</AnchorLink>
+            <AnchorLink href="#faq">FAQ</AnchorLink>
           </li>
           <li>
             <AnchorLink href="#contact">Contact</AnchorLink>

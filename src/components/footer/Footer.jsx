@@ -36,7 +36,7 @@ const Footer = () => {
 
       <div className="footer__info-social main-component">
         <div>
-          <h2>TalimZone</h2>
+          <h2>Admission Couselling</h2>
         </div>
         <div>
           <p>Follow us on social media | </p>

@@ -1,13 +1,13 @@
 import { useState, useEffect } from "react";
 import "./hero.scss";
-import image from "/img/heroimg.svg";
+import image from "/img/hero.svg";
 import AnchorLink from "react-anchor-link-smooth-scroll";
 import {Link} from "react-router-dom";
 
 const Hero = () => {
   const texts = [
-    "Your journey to Child Education starts here",
-    "Unlock your future with Expert Guidance",
+    "Your journey to Higher Education starts here ",
+    "Unlock your future with Expert Guidance ",
     "Chart your path to success with our community",
   ];
 
@@ -47,13 +47,13 @@ const Hero = () => {
       <div className="hero main-component">
         <div className="hero__text">
           <div className="hero_bg"></div>
-          <h2>TalimZone</h2>
+          <h2>Admission Couselling</h2>
           <div className="text-container">
             <span className="displayed-text">{displayedText}</span>
           </div>
           <div className="hero__text-button">
             <AnchorLink href="#contact">Start Learning</AnchorLink>
-            <Link to="https://talim-zone-market.vercel.app/">Explore Courses</Link>
+            <AnchorLink to="#courses">Explore Courses</AnchorLink>
           </div>
         </div>
         <div className="hero__img">
