@@ -1,3 +1,4 @@
+import React, { useState, useEffect } from "react";
 import Header from "../../components/header/Header";
 import Hero from "../../components/hero/Hero";
 import Courses from "../../components/courses/Courses";
@@ -6,10 +7,22 @@ import Statistics from "../../components/statistics/Statistics";
 import Contact from "../../components/contact/Contact";
 import Footer from "../../components/footer/Footer";
 import TestimonialSlider from "../../components/testimonials/Testimonials";
-import InfiniteCarousel from "../../components/carousel/Carousel"
+import InfiniteCarousel from "../../components/carousel/Carousel";
 import Faq from "../../components/faq/Faq";
+import Loader from "../../components/loader/Loader"; // Import your Loader component
 
 const MainPage = () => {
+  const [loading, setLoading] = useState(true); // State to manage loading status
+
+  useEffect(() => {
+    // Set a timeout to change the loading status after the animation duration
+    const timer = setTimeout(() => {
+      setLoading(false);
+    }, 3000); // Adjust the duration to match your animation time
+
+    return () => clearTimeout(timer); // Cleanup the timeout on component unmount
+  }, []);
+
   const items = [
     {
       title: "What is the duration of the courses?",
@@ -23,7 +36,7 @@ const MainPage = () => {
     {
       title: "Will you be helping us with Extracurricular activities ?",
       content:
-        "Our team frequently sends announcements or extracurricular opportunities to our pariticipants and alumni. However, it is not part of the course.",
+        "Our team frequently sends announcements or extracurricular opportunities to our participants and alumni. However, it is not part of the course.",
     },
     {
       title: "What are the payment methods ?",
@@ -56,11 +69,16 @@ const MainPage = () => {
     },
     {
       image: "/img/user.png",
-      text: "During the course, I received  high valuable sources for college admission prosses. I am pretty sure that it is extremely hard and even impossible to find these books, files, and examples from anywhere else. Working individually with Abdulloh bro is so beneficial.",
+      text: "During the course, I received  high valuable sources for college admission process. I am pretty sure that it is extremely hard and even impossible to find these books, files, and examples from anywhere else. Working individually with Abdulloh bro is so beneficial.",
       author: "Bekzod Xurramov",
     },
     // Add more testimonials as needed
   ];
+
+  if (loading) {
+    return <Loader />; // Show the Loader component while loading
+  }
+
   return (
     <>
       <Header />
@@ -70,7 +88,7 @@ const MainPage = () => {
       <TestimonialSlider testimonials={testimonials} />
       <Statistics />
       <InfiniteCarousel />
-      <Faq items={items} /> 
+      <Faq items={items} />
       <Contact />
       <Footer />
     </>
