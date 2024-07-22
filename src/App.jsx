@@ -2,6 +2,7 @@ import "./styles/_main.scss";
 import MainPage from "./pages/main-page/MainPage";
 import { Routes, Route } from "react-router-dom";
 import Register from "./pages/register/Register";
+import EssayCheck from "./pages/essay-check/EssayCheck";
 import Loader from "./components/loader/Loader";
 import { useState, useEffect } from "react";
 
@@ -19,6 +20,7 @@ function App() {
       <Routes>
         <Route path="/" element={<MainPage />} />
         <Route path="/register" element={<Register />} />
+        <Route  path="/essay-check" element={<EssayCheck />}/>
       </Routes>
     </>
   );

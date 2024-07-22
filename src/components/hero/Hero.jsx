@@ -52,7 +52,7 @@ const Hero = () => {
             <span className="displayed-text">{displayedText}</span>
           </div>
           <div className="hero__text-button">
-            <AnchorLink href="#contact">Start Learning</AnchorLink>
+            <Link to={'/essay-check'}>Check Your Essay</Link>
             <AnchorLink href="#courses">Explore Courses</AnchorLink>
           </div>
         </div>

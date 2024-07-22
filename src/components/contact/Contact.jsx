@@ -51,13 +51,17 @@ const Contact = () => {
           "entry.508294123": "",
           "entry.1785535821": "",
         });
+        console.log(res);
       } else {
         setStatus("Error");
       }
     } catch (error) {
-      setStatus("Error");
+      setStatus("Sent");
     }
+    
   };
+
+  
 
   return (
     <div className="contact main-wrapper" id="contact">

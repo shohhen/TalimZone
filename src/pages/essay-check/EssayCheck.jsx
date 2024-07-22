@@ -1,15 +1,15 @@
 import React, { useState } from "react";
 import MainPage from "../main-page/MainPage";
-import './register.scss'
+import './essay_check.scss'
 
-const Register = () => {
+const EssayCheck = () => {
   const [status, setStatus] = useState("Send");
   const [formData, setFormData] = useState({
-    "entry.1786450440": "",
-    "entry.361551795": "",
-    "entry.1223164623": "",
-    "entry.1041557467": "",
-    "entry.233674365": "",
+    "entry.1195714290": "",
+    "entry.1102514207": "",
+    "entry.809462150": "",
+    "entry.1424589896": "",
+    "entry.1163459930": "",
   });
 
   const handleChange = (input, option) => (e) => {
@@ -29,7 +29,7 @@ const Register = () => {
     setStatus("Sending");
 
     const googleFormUrl =
-      "https://docs.google.com/forms/d/e/1FAIpQLSfzwasI-HctuKmYw3y8yLYmIGJVR4U9LKAlF09xXnhfED8ZOQ/formResponse";
+      "https://docs.google.com/forms/u/0/d/e/1FAIpQLSfqjCq1sElVV7KlcO9PvDMLCN064SG-xO3wEUJM_veGpDDoLw/formResponse";
 
     const formDataEntries = Object.entries(formData)
       .map(([key, value]) => `${key}=${encodeURIComponent(value)}`)
@@ -48,11 +48,11 @@ const Register = () => {
       if (res.ok) {
         setStatus("Sent");
         setFormData({
-          "entry.1786450440": "",
-          "entry.361551795": "",
-          "entry.1223164623": "",
-          "entry.1041557467": "",
-          "entry.233674365": "",
+          "entry.1195714290": "",
+          "entry.1102514207": "",
+          "entry.809462150": "",
+          "entry.1424589896": "",
+          "entry.1163459930": "",
         });
         window.location.href = "/";
       } else {
@@ -74,25 +74,26 @@ const Register = () => {
           <p className="close-btn" onClick={onClose}>
             X
           </p>
-          <h2>Register To The Course</h2>
+          <h2>Check Your Essay</h2>
+          <h3>Transform your essays from good to extraordinary with our free essay checker! Our experts are here to help you refine your writing, ensuring clarity, coherence, and correctness. Simply upload your essay, and let us check for grammar mistakes, punctuation errors, and style improvements. Whether you're a student aiming for top grades or a professional polishing your work, our essay checker form provides detailed feedback to elevate your writing. Get ready to impress your readers with flawless, compelling essays. Try it now and see the difference!</h3>
           <form
             onSubmit={handleSubmit}
             target="_self"
             className="contact__block-form"
           >
             <input
-              name="entry.1786450440"
-              value={formData["entry.1786450440"]}
-              onChange={handleChange("entry.1786450440")}
+              name="entry.1195714290"
+              value={formData["entry.1195714290"]}
+              onChange={handleChange("entry.1195714290")}
               required
               autoComplete={"off"}
               type="text"
               placeholder="Your Full Name"
             />
             <input
-              name="entry.361551795"
-              value={formData["entry.361551795"]}
-              onChange={handleChange("entry.361551795")}
+              name="entry.1102514207"
+              value={formData["entry.1102514207"]}
+              onChange={handleChange("entry.1102514207")}
               required
               autoComplete={"off"}
               type="email"
@@ -100,48 +101,31 @@ const Register = () => {
             />
             <input
               type="text"
-              placeholder="Your Telegram Username (if applicable)"
-              name="entry.1223164623"
-              value={formData["entry.1223164623"]}
-              onChange={handleChange("entry.1223164623")}
+              placeholder="Your Essay Question"
+              name="entry.809462150"
+              value={formData["entry.809462150"]}
+              onChange={handleChange("entry.809462150")}
               required
               autoComplete={"off"}
             />
             <input
               type="tel"
-              placeholder="your phone number"
-              name="entry.1041557467"
-              value={formData["entry.1041557467"]}
-              onChange={handleChange("entry.1041557467")}
+              placeholder="Notes for any details"
+              name="entry.1424589896"
+              value={formData["entry.1424589896"]}
+              onChange={handleChange("entry.1424589896")}
               required
               autoComplete={"off"}
             />
-            <select
-              onChange={handleChange("entry.233674365")}
-              name="entry.233674365"
-              id=""
-              placeholder="choose the course"
-            >
-              <option value=" ">Choose the course</option>
-              <option value="Admissions course (Standard plan)">
-                Admissions course (Standard plan)
-              </option>
-              <option value="Admissions course (Basic plan)">
-                Admissions course (Basic plan)
-              </option>
-              <option value="Admissions course (Full support)">
-                Admissions course (Full support)
-              </option>
-              <option value="Bootcamp (UofT & UBC)">
-                Bootcamp (UofT & UBC)
-              </option>
-              <option value="Duolingo English Test course">
-                Duolingo English Test course
-              </option>
-              <option value="Canadian Visa Application">
-                Canadian Visa Application
-              </option>
-            </select>
+            <textarea
+            name="entry.1163459930"
+            value={formData["entry.1163459930"]}
+            onChange={handleChange("entry.1163459930")}
+            required
+            autoComplete={"off"}
+            placeholder="Your Essay"
+          ></textarea>
+            
             <button className="contact__block-form-submit" type="submit">
               {status}
             </button>
@@ -152,4 +136,4 @@ const Register = () => {
   );
 };
 
-export default Register;
+export default EssayCheck;
